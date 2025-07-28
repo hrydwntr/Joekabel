@@ -188,23 +188,23 @@ nav {
   background-color: var(--white);
 }
 
-.hotel {
+.kabellistrik {
   background-color: var(--extra-light);
 }
 
-.hotel__grid {
+.kabellistrik__grid {
   margin-top: 2rem;
   display: grid;
   gap: 1rem;
 }
 
-.hotel__image {
+.kabellistrik__image {
   margin-bottom: 0.5rem;
   position: relative;
-  isolation: isolate;
+  isolation: isolate; 
 }
 
-.hotel__rating {
+.kabellistrik__rating {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -217,30 +217,30 @@ nav {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.hotel__rating span {
+.kabellistrik__rating span {
   font-size: 1rem;
   color: goldenrod;
 }
 
-.hotel__image img {
+.kabellistrik__image img {
   border-radius: 0.75rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.hotel__card h4 {
+.kabellistrik__card h4 {
   margin-bottom: 0.5rem;
   font-size: 1.375rem;
   font-weight: 700;
   color: var(--text-dark);
 }
 
-.hotel__card p {
+.kabellistrik__card p {
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--primary-color);
 }
 
-.hotel__card p span {
+.kabellistrik__card p span {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -506,11 +506,11 @@ footer {
 }
 
 @media (width > 540px) {
-  .hotel__container .section__header {
+  .kabellistrik__container .section__header {
     text-align: left;
   }
 
-  .hotel__grid {
+  .kabellistrik__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -596,7 +596,7 @@ footer {
     justify-content: flex-start;
   }
 
-  .hotel__grid {
+  .kabellistrik__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -631,7 +631,7 @@ footer {
 }
 
 @media (width > 1024px) {
-  .hotel__grid {
+  .kabellistrik__grid {
     gap: 1.5rem;
   }
 

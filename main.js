@@ -35,7 +35,7 @@ ScrollReveal().reveal(".header__btns", {
   delay: 1000,
 });
 
-ScrollReveal().reveal(".hotel__card", {
+ScrollReveal().reveal(".kabellistrik__card", {
   ...scrollRevealOption,
   interval: 500,
 });
