@@ -82,7 +82,7 @@ header {
       rgba(0, 0, 0, 0.25),
       rgba(255, 255, 255, 0)
     ),
-    url("/assets/headercable.png");
+    url("assets/header.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
