@@ -259,7 +259,7 @@ nav {
   display: grid;
   position: relative;
   width: 100%;
-  padding-block: 5rem;
+  padding: 5rem;
   grid-template-areas:
     "heading"
     "content";
@@ -978,14 +978,14 @@ footer {
   }
 
   .header__container {
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "heading content";
     text-align: left;
   }
 
   .header__container h1 {
     text-align: left;
-    font-size: 6rem;
+    font-size: 4.5rem;
     line-height: 6.5rem;
   }
 
@@ -993,7 +993,6 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     grid-area: content;
     z-index: 3;
   }
@@ -1024,11 +1023,12 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .header__btns {
+    justify-content: flex-start;
+  }
+  
   }
 
-  .header__btns {
-    /* justify-content: flex-start; */
-  }
 
   .kabellistrik__grid {
     grid-template-columns: repeat(3, 1fr);
