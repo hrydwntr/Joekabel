@@ -18,6 +18,57 @@ navLinks.addEventListener("click", () => {
 });
 
 
+// --- Responsive Nav Logo Logic ---
+const navLogo = document.querySelector('.nav__logo a');
+const fullLogoTitle = navLogo.dataset.fullTitle;
+const shortLogoTitle = "DSI"; // The shortened logo text
+
+function updateNavLogo() {
+  const currentWidth = window.innerWidth;
+
+  // Check if the screen width is between 757px and 951px
+  if (currentWidth > 786 && currentWidth < 951) {
+    // If the condition is met, change the logo text
+    navLogo.textContent = shortLogoTitle;
+  } else {
+    // Otherwise, revert the logo text back to the full version
+    navLogo.textContent = fullLogoTitle;
+  }
+}
+
+// Run the function once on page load
+updateNavLogo();
+
+// Add an event listener to run the function whenever the window is resized
+window.addEventListener('resize', updateNavLogo);
+
+
+// --- Floating WhatsApp Button Logic ---
+const whatsappBtn = document.getElementById('whatsappBtn');
+const navBar = document.querySelector('nav');
+const headerBtns = document.querySelector('.header__btns');
+
+// Function to handle showing/hiding the button
+function handleScroll() {
+  const navHeight = navBar.offsetHeight;
+  const headerBtnsPosition = headerBtns.getBoundingClientRect().top;
+  
+  // If the header buttons' top position is at or above the bottom of the navbar
+  if (headerBtnsPosition <= navHeight) {
+    whatsappBtn.classList.add('show');
+  } else {
+    // Otherwise, hide the button
+    whatsappBtn.classList.remove('show');
+  }
+}
+
+// Attach the scroll event listener to the window
+window.addEventListener('scroll', handleScroll);
+
+// Also run it once on page load to handle refreshing the page while scrolled down
+window.addEventListener('load', handleScroll);
+
+
 // Select all elements with the class 'steps__card'
 const stepsCards = document.querySelectorAll('.steps__card');
 
