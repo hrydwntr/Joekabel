@@ -23,7 +23,17 @@
         </div>
         <ul class="nav__links" id="nav-links">
           <li><a href="#home">BERANDA</a></li>
-          <li><a href="#kabellistrik">PRODUK</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              PRODUK <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#kabel">Item Kabel</a></li>
+              <li><a href="#kabel-tray">Kabel Tray</a></li>
+              <li><a href="#busbar">Busbar</a></li>
+              <li><a href="#grounding-rod">Grounding Rod</a></li>
+            </ul>
+          </li>
           <li><a href="#tentang-perusahaan">TENTANG KAMI</a></li>
           <li><a href="#info">INFORMASI</a></li>
           <li><a href="#contact">KONTAK</a></li>
@@ -174,7 +184,7 @@
 
     <section class="property" id="property">
       <div class="section__container property__container">
-        <h2 class="section__header">Klien Kami</h2>
+        <h2 class="section__header">Dokumentasi</h2>
         <p class="section__description">
           Deretan pelanggan yang puas dengan pelayanan dan produk kami di berbagai industry.
         </p>
@@ -322,6 +332,14 @@
             target="_blank"
           >
             <i class="ri-map-pin-fill"></i> Jl. Contoh No. 123, Jakarta, Indonesia
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.darnelsimaindonesia.com/"
+            target="_blank"
+          >
+            <i class="ri-global-fill"></i> darnelsimaindonesia.com
           </a>
         </li>
       </ul>
