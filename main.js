@@ -71,21 +71,21 @@ function updateNavLogo() {
 updateNavLogo();
 window.addEventListener('resize', updateNavLogo);
 
-// --- Floating WhatsApp Button Logic ---
-const whatsappBtn = document.getElementById('whatsappBtn');
-const headerBtns = document.querySelector('.header__btns');
+// // --- Floating WhatsApp Button Logic ---
+// const whatsappBtn = document.getElementById('whatsappBtn');
+// const headerBtns = document.querySelector('.header__btns');
 
-function handleScroll() {
-  const navHeight = navBar.offsetHeight;
-  const headerBtnsPosition = headerBtns.getBoundingClientRect().top;
-  if (headerBtnsPosition <= navHeight) {
-    whatsappBtn.classList.add('show');
-  } else {
-    whatsappBtn.classList.remove('show');
-  }
-}
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
+// function handleScroll() {
+//   const navHeight = navBar.offsetHeight;
+//   const headerBtnsPosition = headerBtns.getBoundingClientRect().top;
+//   if (headerBtnsPosition <= navHeight) {
+//     whatsappBtn.classList.add('show');
+//   } else {
+//     whatsappBtn.classList.remove('show');
+//   }
+// }
+// window.addEventListener('scroll', handleScroll);
+// window.addEventListener('load', handleScroll);
 
 // --- Modal Logic (Sistem yang Disederhanakan) ---
 // Gunakan satu sistem yang fleksibel untuk semua modal

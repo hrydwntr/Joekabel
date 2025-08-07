@@ -79,20 +79,20 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 999; /* Ensure it stays on top of other content */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* opacity: 0; Initially hidden */
+  /* transition: opacity 0.3s ease, transform 0.3s ease; */
   transform: scale(0.8); /* Slightly smaller when hidden */
   font-size: 1rem;
   font-family: "Lato", sans-serif;
-  color: black;
-  background-color: var(--white);
+  color: white;
+  background-color: #25D366;
   transition: 0.3s;
   cursor: pointer;
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 50%;
+  border: none;
 }
 
 .btn-reverse i {
@@ -102,12 +102,12 @@
 }
 
 
-.btn-reverse:hover {
+/* .btn-reverse:hover {
   background-color: var(--primary-color);
   color: #fff;
   outline: none;
   border: none;
-}
+} */
 
 /* Class to make the button visible and animate it */
 .btn-reverse.show {
@@ -349,8 +349,8 @@ nav {
 }
 
 .header__btns .btn:nth-child(1) {
-  color: var(--text-dark);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: #25D366;
 }
 
 .header__btns .btn:nth-child(2) {
