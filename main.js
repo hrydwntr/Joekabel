@@ -138,6 +138,26 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Mengisi konten modal saat steps card diklik
+const stepsCards = document.querySelectorAll('.steps__card');
+const aboutModal = document.getElementById('modalOverlay');
+const aboutModalTitle = document.getElementById('modalTitle');
+const aboutModalDesc = document.getElementById('modalDescription');
+
+stepsCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const title = card.dataset.title;
+    const description = card.dataset.description;
+    
+    // Mengisi konten ke modal dan membukanya
+    if(aboutModal && aboutModalTitle && aboutModalDesc) {
+      aboutModalTitle.innerText = title;
+      aboutModalDesc.innerText = description;
+      openModal(aboutModal); // Memanggil fungsi openModal yang sudah ada
+    }
+  });
+});
+
 // --- CAROUSEL LOGIC ---
 const clientCarousel = document.getElementById('clientCarousel');
 const carouselPrevBtn = document.getElementById('carouselPrevBtn');

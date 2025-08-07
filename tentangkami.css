@@ -1,0 +1,172 @@
+/* --- Tentang Kami Section --- */
+.tentang-kami-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.tentang-kami-image {
+    width: 100%;
+}
+
+.tentang-kami-image img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tentang-kami-content {
+    max-width: 600px;
+}
+
+.section__header {
+  color: var(--primary-color)
+}
+
+/* --- Visi & Misi Section --- */
+.value-section {
+    background-color: var(--extra-light);
+}
+
+.value-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.section__description{
+  color: var(--text-dark);
+}
+
+.section__presenter{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.value-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 0.5rem;
+}
+
+.mission-box,
+.vision-box {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-box h3 {
+  color: var(--primary-color);
+}
+
+.vision-box h3 {
+  color: var(--primary-color);
+}
+
+/* --- Achievement Stats Section --- */
+.achievement-stats-section {
+    position: relative;
+    padding: 5rem 1rem;
+    background-image: url('assets/bricks.webp'); /* Ganti dengan gambar bata Anda */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: var(--white);
+}
+
+.achievement-stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.achievement-stats-container {
+    position: relative;
+    z-index: 2;
+}
+
+.achievement-stats-grid {
+    display: grid; /* Ubah dari flex menjadi grid */
+    grid-template-columns: 1fr; /* Default 1 kolom untuk mobile */
+    gap: 2rem;
+}
+
+.achievement-stats-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-stats-card h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Media Query untuk Tablet (> 540px): 2 kolom --- */
+@media (min-width: 541px) { /* Menggunakan 541px untuk > 540px */
+    .achievement-stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    }
+}
+
+/* --- Media Query untuk Desktop (> 786px) --- */
+@media (min-width: 787px) {
+    /* Section 1 */
+    .tentang-kami-container {
+        flex-direction: row;
+        text-align: left;
+        gap: 4rem;
+        align-items: center;
+    }
+    
+    .tentang-kami-content {
+        order: 2;
+        flex: 1;
+    }
+    
+    .tentang-kami-image {
+        order: 1;
+        flex: 1;
+    }
+
+    /* Section 2 */
+    .value-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        grid-template-areas:
+            "text mission"
+            "vision vision";
+        text-align: left;
+    }
+    
+    .value-text {
+        grid-area: text;
+    }
+    
+    .mission-box {
+        grid-area: mission;
+    }
+    
+    .vision-box {
+        grid-area: vision;
+    }
+
+    /* Section 3 */
+    .achievement-stats-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+        gap: 1rem; /* Sesuaikan gap untuk 4 kolom jika diperlukan */
+    }
+}

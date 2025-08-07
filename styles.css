@@ -83,20 +83,19 @@
   /* opacity: 0; Initially hidden */
   /* transition: opacity 0.3s ease, transform 0.3s ease; */
   transform: scale(0.8); /* Slightly smaller when hidden */
-  font-size: 1rem;
   font-family: "Lato", sans-serif;
   color: white;
   background-color: #25D366;
   transition: 0.3s;
   cursor: pointer;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
-  border: none;
+  border: 0.3rem solid var(--white);
 }
 
 .btn-reverse i {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0%;
   padding: 0%;
 }
@@ -315,6 +314,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 66rem;
 }
 
 .header__container h1 {
@@ -324,6 +324,7 @@ nav {
   font-weight: 500;
   color: var(--white);
   z-index: 3;
+  height: 100%;
 }
 
 .header__container div {
@@ -346,18 +347,19 @@ nav {
 .header__btns .btn {
   padding: calc(0.75rem - 4px) calc(1.5rem - 4px);
   border: 2px solid var(--white);
+  width: 100%;
 }
 
-.header__btns .btn:nth-child(1) {
+/* .header__btns .btn:nth-child(1) {
   color: var(--white);
   background-color: #25D366;
-}
+} */
 
-.header__btns .btn:nth-child(2) {
+.header__btns .btn:nth-child(1) {
   background-color: transparent;
 }
 
-.header__btns .btn:nth-child(2):hover {
+.header__btns .btn:nth-child(1):hover {
   color: var(--text-dark);
   background-color: var(--white);
 }
