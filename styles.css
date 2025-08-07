@@ -399,7 +399,7 @@ nav {
 
 .achievement-box p {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: bolder;
   color: var(--text-dark);
 }
 
@@ -416,67 +416,63 @@ nav {
   color: var(--white);
 }
 
-.kabellistrik {
-  background-color: var(--extra-light);
+/* --- Bagian Pilihan Kabel Terbaik --- */
+.kabellistrik__container {
+    text-align: center;
 }
 
+/* Mengubah grid menjadi 2x2 tanpa celah */
 .kabellistrik__grid {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0; /* Menghilangkan semua jarak antar kartu */
+    margin-top: 2rem;
 }
 
-.kabellistrik__image {
-  margin-bottom: 0.5rem;
-  position: relative;
-  isolation: isolate; 
-  width: 100%;
-  height: 200px;
+.kabellistrik__card {
+    position: relative; /* Penting untuk overlay */
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* Memastikan setiap kartu berbentuk persegi */
+    text-decoration: none; /* Menghilangkan garis bawah dari tautan */
+    display: block;
 }
 
-.kabellistrik__rating {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.125rem 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  background-color: var(--white);
-  border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.kabellistrik__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.kabellistrik__rating span {
-  font-size: 1rem;
-  color: goldenrod;
+/* Gaya overlay */
+.kabellistrik__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Opasitas awal 0.3 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
 }
 
-.kabellistrik__image img {
-  border-radius: 0.75rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.kabellistrik__overlay h4 {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
 }
 
-.kabellistrik__card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: var(--text-dark);
+/* Efek hover */
+.kabellistrik__card:hover .kabellistrik__overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Opasitas menjadi 0.5 saat di-hover */
 }
 
-.kabellistrik__card p {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--primary-color);
-}
-
-.kabellistrik__card p span {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-dark);
+.kabellistrik__card:hover img {
+    transform: scale(1.05); /* Gambar sedikit membesar saat di-hover */
 }
 
 .steps__grid { 
@@ -1066,7 +1062,7 @@ footer {
 
   .nav__header {
     flex: 1;
-    padding: 0;
+    padding: 0 6rem;
     background-color: transparent;    
   }
 
@@ -1163,6 +1159,10 @@ footer {
     max-width: 1200px;
   }
 
+  .kabellistrik__grid {
+        grid-template-columns: repeat(2, 1fr);
+  }
+
     /* .steps__grid {
     grid-template-columns: repeat(3, 1fr);
   } */
@@ -1187,10 +1187,6 @@ footer {
   .header__btns {
     justify-content: flex-start;
   }
-  
-  .kabellistrik__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
   }
 
 
@@ -1207,9 +1203,6 @@ footer {
 
 
 @media (width > 1024px) {
-  .kabellistrik__grid {
-    gap: 1.5rem;
-  }
 
   .steps__grid {
     gap: 1.5rem;

@@ -7,7 +7,6 @@
 .produk-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; /* Jarak antar kartu */
     margin-top: 2rem;
 }
 
